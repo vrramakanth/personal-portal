@@ -1,0 +1,129 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+
+@theme inline {
+  --font-sans: 'Inter', sans-serif;
+  --font-display: 'Outfit', sans-serif;
+
+  --radius-sm: 0.5rem;
+  --radius-md: 0.75rem;
+  --radius-lg: 1rem;
+  --radius-xl: 1.5rem;
+
+  --color-background: hsl(var(--background));
+  --color-foreground: hsl(var(--foreground));
+
+  --color-card: hsl(var(--card));
+  --color-card-foreground: hsl(var(--card-foreground));
+
+  --color-primary: hsl(var(--primary));
+  --color-primary-foreground: hsl(var(--primary-foreground));
+
+  --color-secondary: hsl(var(--secondary));
+  --color-secondary-foreground: hsl(var(--secondary-foreground));
+
+  --color-muted: hsl(var(--muted));
+  --color-muted-foreground: hsl(var(--muted-foreground));
+
+  --color-accent: hsl(var(--accent));
+  --color-accent-foreground: hsl(var(--accent-foreground));
+
+  --color-border: hsl(var(--border));
+  --color-input: hsl(var(--input));
+  --color-ring: hsl(var(--ring));
+
+  --color-glass: hsl(var(--glass));
+  --color-glass-border: hsl(var(--glass-border));
+}
+
+:root {
+  --background: 220 30% 99%;
+  --foreground: 224 20% 12%;
+
+  --card: 0 0% 100%;
+  --card-foreground: 224 20% 12%;
+
+  --popover: 0 0% 100%;
+  --popover-foreground: 224 20% 12%;
+
+  --primary: 243 75% 59%;
+  --primary-foreground: 0 0% 100%;
+
+  --secondary: 220 20% 95%;
+  --secondary-foreground: 224 20% 15%;
+
+  --muted: 220 20% 95%;
+  --muted-foreground: 220 10% 45%;
+
+  --accent: 220 20% 95%;
+  --accent-foreground: 224 20% 15%;
+
+  --destructive: 0 84.2% 60.2%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 220 15% 90%;
+  --input: 220 15% 90%;
+  --ring: 243 75% 59%;
+
+  --radius: 1rem;
+
+  --glass: 0 0% 100%;
+  --glass-border: 220 20% 90%;
+}
+
+.dark {
+  --background: 224 24% 8%;
+  --foreground: 220 20% 96%;
+
+  --card: 224 22% 11%;
+  --card-foreground: 220 20% 96%;
+
+  --popover: 224 22% 11%;
+  --popover-foreground: 220 20% 96%;
+
+  --primary: 243 80% 68%;
+  --primary-foreground: 224 24% 8%;
+
+  --secondary: 224 18% 16%;
+  --secondary-foreground: 220 20% 96%;
+
+  --muted: 224 18% 16%;
+  --muted-foreground: 220 10% 65%;
+
+  --accent: 224 18% 16%;
+  --accent-foreground: 220 20% 96%;
+
+  --destructive: 0 62.8% 30.6%;
+  --destructive-foreground: 0 0% 98%;
+
+  --border: 224 18% 18%;
+  --input: 224 18% 18%;
+  --ring: 243 80% 68%;
+
+  --glass: 224 22% 11%;
+  --glass-border: 224 18% 22%;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply font-sans antialiased bg-background text-foreground;
+    min-height: 100vh;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-display font-bold tracking-tight;
+  }
+}
+
+.glass-panel {
+  @apply bg-glass/70 backdrop-blur-xl border border-glass-border/60 shadow-lg;
+}
+
+.glass-card {
+  @apply bg-card/80 backdrop-blur-md border border-border shadow-sm hover:shadow-md transition-all duration-300;
+}
