@@ -240,7 +240,7 @@ export const talkArticle = {
 export const pressImages = ["/media-1.jpg", "/media-2.jpg", "/media-3.jpg", "/media-4.jpg", "/media-5.jpg"];
 
 export const eventPhotos = [
-  { src: "/bvrit_talk.png", caption: "BVRIT Alumni Talk — Thriving in the Age of AI" },
+  { src: "/bvrit_talk.jpg", caption: "BVRIT Alumni Talk — Thriving in the Age of AI" },
   { src: "/talk_physics_1.jpg", caption: "Guest Lecture: Physics in Medicine, MVJ Engineering College" },
   { src: "/poster_1.jpg", caption: "HCT-I Tech Symposium — Medical Imaging & Diagnostics" },
   { src: "/poster_2.jpg", caption: "MR/AW Design Transfers — Process Simplification" },

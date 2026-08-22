@@ -1,6 +1,7 @@
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { talks, talksIntro, talkArticle, pressImages, eventPhotos } from "@/data/portfolio";
+import { LiteYouTube } from "./lite-youtube";
 
 export function Talks() {
   return (
@@ -30,15 +31,7 @@ export function Talks() {
             >
               <div className="rounded-2xl overflow-hidden border border-border shadow-sm" data-testid={`card-talk-${i}`}>
                 <div className="relative aspect-video bg-black/5">
-                  <iframe
-                    width="100%"
-                    height="100%"
-                    src={`https://www.youtube.com/embed/${talk.videoId}`}
-                    title={talk.label}
-                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                    allowFullScreen
-                    className="absolute inset-0"
-                  />
+                  <LiteYouTube videoId={talk.videoId!} title={talk.label} />
                 </div>
                 <p className="text-sm font-medium p-4">{talk.label}</p>
               </div>
@@ -62,7 +55,13 @@ export function Talks() {
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-4">
             {eventPhotos.map((photo) => (
               <div key={photo.src} className="relative group rounded-xl overflow-hidden aspect-[4/3]" data-testid={`img-event-${photo.src}`}>
-                <img src={photo.src} alt={photo.caption} className="w-full h-full object-cover" />
+                <img
+                  src={photo.src}
+                  alt={photo.caption}
+                  loading="lazy"
+                  decoding="async"
+                  className="w-full h-full object-cover"
+                />
                 <div className="absolute inset-x-0 bottom-0 bg-gradient-to-t from-black/70 to-transparent p-2.5">
                   <p className="text-white text-[11px] font-medium leading-tight">{photo.caption}</p>
                 </div>
@@ -79,6 +78,8 @@ export function Talks() {
                 key={src}
                 src={src}
                 alt="Press coverage"
+                loading="lazy"
+                decoding="async"
                 className="w-full rounded-xl border border-border shadow-sm object-cover aspect-[3/4]"
               />
             ))}
