@@ -34,7 +34,7 @@ export const socials: SocialLink[] = [
   { id: "whatsapp", label: "WhatsApp", url: profile.whatsapp, icon: MessageCircle },
   { id: "facebook", label: "Facebook", url: "https://www.facebook.com/vrramakanth", icon: Facebook },
   { id: "instagram", label: "Instagram", url: "https://www.instagram.com/vrramakanth/", icon: Instagram },
-  { id: "twitter", label: "Twitter / X", url: "https://x.com/Ramakanthvanga1", icon: Twitter },
+  { id: "twitter", label: "Twitter / X", url: "https://x.com/ramakanth_vr?s=11", icon: Twitter },
 ];
 
 export const aboutParagraphs = [
