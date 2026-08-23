@@ -1,15 +1,14 @@
-import { useState } from "react";
 import { Play } from "lucide-react";
 
 interface LiteYouTubeProps {
   videoId: string;
   title: string;
+  playing: boolean;
+  onPlay: () => void;
 }
 
-export function LiteYouTube({ videoId, title }: LiteYouTubeProps) {
-  const [loaded, setLoaded] = useState(false);
-
-  if (loaded) {
+export function LiteYouTube({ videoId, title, playing, onPlay }: LiteYouTubeProps) {
+  if (playing) {
     return (
       <iframe
         width="100%"
@@ -26,7 +25,7 @@ export function LiteYouTube({ videoId, title }: LiteYouTubeProps) {
   return (
     <button
       type="button"
-      onClick={() => setLoaded(true)}
+      onClick={onPlay}
       className="absolute inset-0 w-full h-full group cursor-pointer"
       aria-label={`Play video: ${title}`}
       data-testid={`button-play-${videoId}`}

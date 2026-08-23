@@ -38,11 +38,9 @@ export const socials: SocialLink[] = [
 ];
 
 export const aboutParagraphs = [
-  "Ramakanth V.R. is an engineering and technology leader with over two decades of experience in software systems, where he has worked at the intersection of hardware, software, and emerging technologies to build impactful and reliable solutions. Over the years, he has led diverse global cross-functional teams, driven digital transformation initiatives, and contributed to innovation through patented work in his earlier roles. Colleagues know him as someone who combines strong technical depth with a practical, people-first approach to leadership.",
-  "Outside his professional life, Ramakanth has always believed in giving back to the institutions and communities that shaped him. He has maintained a close association with his alma mater, BVRIT Narsapur, for more than 20 years and currently serves as a board member, supporting initiatives that help students and the institution stay connected with evolving industry needs.",
-  "Ramakanth has been an active member in the communities he lived, who believes that strong communities are built through participation, empathy, and shared responsibility. He has been involved in several initiatives aimed at improving infrastructure, encouraging volunteer-led activities, and fostering constructive dialogue among fellow residents. His approach focuses on finding balanced solutions while ensuring that community decisions remain inclusive and sustainable.",
-  "When he's not building platforms, you'll likely find him plotting the next community initiative, scouting a good long drive, traveling with family, or buried in his Kindle — Partition-era history for the next political debate, a coaching book for the next mentoring session, or the odd DevOps classic for old times' sake.",
-  "On a personal note, Ramakanth values independent thinking, enjoys meaningful conversations, and embraces change as an opportunity to learn and grow. Above all, he considers himself a family person who takes great joy in supporting his daughter's interests and being present for the moments that matter most.",
+  "Ramakanth V.R. is an engineering and technology leader with over two decades of experience in software systems, working at the intersection of hardware, software, and emerging technologies. He has led global cross-functional teams, driven digital transformation, and contributed to innovation through patented work — combining technical depth with a practical, people-first approach to leadership.",
+  "Outside work, he's the kind of person who believes in giving back to the places that shaped him — his alma mater, and the community he lives in (more on that below). He values independent thinking, enjoys meaningful conversations, and treats change as a chance to learn.",
+  "When he's not building platforms, you'll likely find him scouting a good long drive, traveling with family, or buried in his Kindle — Partition-era history for the next political debate, a coaching book for the next mentoring session, or the odd DevOps classic for old times' sake. Above all, he's a family person who takes great joy in supporting his daughter's interests and being present for the moments that matter most.",
 ];
 
 export interface JourneyChapter {
@@ -67,8 +65,7 @@ export const journey: JourneyChapter[] = [
   {
     era: "Throughout",
     title: "What runs alongside the career",
-    summary:
-      "Two decades in, what matters just as much: staying close to BVRIT as a board member, mentoring the next generation of engineers, showing up for local community initiatives, and being present for his daughter. Ramakanth treats those as goals in their own right, not things that happen after work is done.",
+    summary: "Two decades in, plenty else has mattered just as much — see what fills the weekends below.",
   },
 ];
 
@@ -92,8 +89,7 @@ export const initiativesIntro =
 export const initiatives: Initiative[] = [
   {
     title: "Resident Welfare Initiatives",
-    description:
-      "Hands-on projects for his own RWA — vendor selection, compliance, and rollout for each — that other communities have since asked him to walk them through on camera.",
+    description: "Vendor selection, compliance, and full rollout — three projects driven start to finish for his own RWA.",
     details: [
       {
         label: "Rooftop Solar Adoption",
@@ -195,8 +191,7 @@ export const recognition = [
   },
   {
     title: "Featured Voice, Mygate Dispatch Spotlight",
-    description:
-      "Invited across three episodes to share how his RWA approached solar adoption, water metering, and waste management with other communities.",
+    description: "Invited across three episodes to share his RWA's approach with other communities.",
     url: "https://youtu.be/bBf_KQBu5p8",
   },
   {
@@ -229,8 +224,7 @@ export const talks: Talk[] = [
   },
 ];
 
-export const talksIntro =
-  "Mygate's Dispatch Spotlight series featured Ramakanth for his hands-on work driving resident-community initiatives.";
+export const talksIntro = "Mygate's Dispatch Spotlight featured Ramakanth across three episodes on the RWA work covered above.";
 
 export const talkArticle = {
   label: "Read: Talk on Thriving in the Age of AI",

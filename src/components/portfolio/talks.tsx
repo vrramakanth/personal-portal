@@ -1,9 +1,12 @@
+import { useState } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { talks, talksIntro, talkArticle, pressImages, eventPhotos } from "@/data/portfolio";
 import { LiteYouTube } from "./lite-youtube";
 
 export function Talks() {
+  const [playingId, setPlayingId] = useState<string | null>(null);
+
   return (
     <section id="talks" className="py-20 sm:py-28" data-testid="section-talks">
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -31,7 +34,12 @@ export function Talks() {
             >
               <div className="rounded-2xl overflow-hidden border border-border shadow-sm" data-testid={`card-talk-${i}`}>
                 <div className="relative aspect-video bg-black/5">
-                  <LiteYouTube videoId={talk.videoId!} title={talk.label} />
+                  <LiteYouTube
+                    videoId={talk.videoId!}
+                    title={talk.label}
+                    playing={playingId === talk.videoId}
+                    onPlay={() => setPlayingId(talk.videoId!)}
+                  />
                 </div>
                 <p className="text-sm font-medium p-4">{talk.label}</p>
               </div>
