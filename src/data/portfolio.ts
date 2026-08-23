@@ -84,12 +84,13 @@ export interface Initiative {
 }
 
 export const initiativesIntro =
-  "Most weekends go to community-led work in the places he's lived — resident welfare initiatives that started as neighborly problem-solving and turned into projects other communities now ask him to talk about.";
+  "Most weekends go to community leadership — running community initiatives, building industry networks, and staying connected with his alma mater and its students along the way.";
 
 export const initiatives: Initiative[] = [
   {
-    title: "Resident Welfare Initiatives",
-    description: "Vendor selection, compliance, and full rollout — three projects driven start to finish for his own RWA.",
+    title: "Community Initiatives",
+    description:
+      "Over the years, turning everyday challenges into structured, sustainable initiatives spanning governance, smart utilities, solar and EV infrastructure, and resident life. It's community leadership, operational transformation, sustainability, and civic engagement, all at once — work that saw the team he's part of earn wider recognitions. A closer look at three of those projects:",
     details: [
       {
         label: "Rooftop Solar Adoption",
