@@ -38,9 +38,9 @@ export const socials: SocialLink[] = [
 ];
 
 export const aboutParagraphs = [
-  "Ramakanth V.R. is an engineering and technology leader with over two decades of experience in software systems, working at the intersection of hardware, software, and emerging technologies. He has led global cross-functional teams, driven digital transformation, and contributed to innovation through patented work — combining technical depth with a practical, people-first approach to leadership.",
+  "Ramakanth V.R. is an engineering and technology leader with over two decades of experience in software systems, working at the intersection of hardware, software, and emerging technologies. He has led global cross-functional teams, driven digital transformation, and contributed to innovation through patented work — combining technical depth with a practical, people-first approach to leadership, on the job and in the community he calls home.",
   "Outside work, he's the kind of person who believes in giving back to the places that shaped him — his alma mater, and the community he lives in (more on that below). He values independent thinking, enjoys meaningful conversations, and treats change as a chance to learn.",
-  "When he's not building platforms, you'll likely find him scouting a good long drive, traveling with family, or buried in his Kindle — Partition-era history for the next political debate, a coaching book for the next mentoring session, or the odd DevOps classic for old times' sake. Above all, he's a family person who takes great joy in supporting his daughter's interests and being present for the moments that matter most.",
+  "When he's not building platforms, you will find him working on next initiative or celebration at his community, scouting a good long drive, traveling with family, or buried in his Kindle — Partition-era history for the next political debate, a coaching book for the next mentoring session, or the odd DevOps classic for old times' sake. Above all, he's a family person who takes great joy in supporting his daughter's interests and being present for the moments that matter most.",
 ];
 
 export interface JourneyChapter {
