@@ -88,7 +88,7 @@ export const initiativesIntro =
 
 export const initiatives: Initiative[] = [
   {
-    title: "Leadership & Community Impact",
+    title: "Community Initiatives",
     description:
       "Over the years, turning everyday challenges into structured, sustainable initiatives spanning governance, smart utilities, solar and EV infrastructure, and resident life. It's community leadership, operational transformation, sustainability, and civic engagement, all at once — work that saw the team he's part of earn wider recognitions. A closer look at three of those projects:",
     details: [

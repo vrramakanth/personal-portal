@@ -16,7 +16,7 @@ export function Initiatives() {
           transition={{ duration: 0.5 }}
           className="mb-12 max-w-2xl"
         >
-          <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-3">Community Initiatives</p>
+          <p className="text-sm font-semibold uppercase tracking-widest text-primary mb-3">Leadership & Community Impact</p>
           <h2 className="text-3xl sm:text-4xl font-display font-bold tracking-tight mb-4">
             Where the weekends go
           </h2>
