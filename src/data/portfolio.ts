@@ -190,10 +190,42 @@ export const recognition = [
     description: "Invited across three episodes to share his RWA's approach with other communities.",
     url: "https://youtu.be/bBf_KQBu5p8",
   },
+];
+
+export const leadershipIntro =
+  "Structured leadership programs, industry forums — the learning has never really stopped, and lately includes stepping in himself to teach and mentor.";
+
+export interface LeadershipMilestone {
+  title: string;
+  org: string;
+  period: string;
+  note?: string;
+  source?: { label: string; url: string };
+}
+
+export const leadershipTimeline: LeadershipMilestone[] = [
+  { title: "Foundations of GE Leadership", org: "GE Crotonville", period: "2007" },
+  { title: "Building Essential Leadership Skills", org: "GE Global Learning", period: "2011" },
+  { title: "Accelerated Learning Program, Functional Management Track", org: "GE", period: "2014" },
+  { title: "India Frontline Leaders Academy", org: "GE", period: "2015" },
+  { title: "Managing at GE", org: "GE Crotonville", period: "2015" },
   {
-    title: "NASSCOM Technology & Leadership Forum 2024",
-    description: "Attended NTLF 2024, NASSCOM's industry forum on AI, GenAI, and emerging technology trends.",
+    title: "Mentor, Edison Engineering Development Program",
+    org: "GE Healthcare",
+    period: "2019 — 2021",
+    note: "Hands-on technical mentorship",
   },
+  {
+    title: "Leadership Training Facilitator",
+    org: "State Street, GTS India",
+    period: "2024",
+    note: "Stepped in to teach and mentor",
+    source: {
+      label: "View the LinkedIn post",
+      url: "https://www.linkedin.com/posts/vrramakanth_leadershipdevelopment-futureleaders-continuouslearning-activity-7276979173724725248-CL1E/",
+    },
+  },
+  { title: "NASSCOM Technology & Leadership Forum (NTLF)", org: "NASSCOM", period: "2024" },
 ];
 
 export interface Talk {

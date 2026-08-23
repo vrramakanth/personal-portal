@@ -2,6 +2,7 @@ import { Navbar } from "@/components/portfolio/navbar";
 import { Hero } from "@/components/portfolio/hero";
 import { About } from "@/components/portfolio/about";
 import { Journey } from "@/components/portfolio/journey";
+import { Leadership } from "@/components/portfolio/leadership";
 import { Initiatives } from "@/components/portfolio/initiatives";
 import { Recognition } from "@/components/portfolio/recognition";
 import { Talks } from "@/components/portfolio/talks";
@@ -14,6 +15,7 @@ export default function Home() {
       <Hero />
       <About />
       <Journey />
+      <Leadership />
       <Initiatives />
       <Recognition />
       <Talks />
