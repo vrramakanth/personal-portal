@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink } from "lucide-react";
 import { talks, talksIntro, talkArticle, pressImages, eventPhotos } from "@/data/portfolio";
@@ -6,6 +6,50 @@ import { LiteYouTube } from "./lite-youtube";
 
 export function Talks() {
   const [playingId, setPlayingId] = useState<string | null>(null);
+  const playingRef = useRef<string | null>(null);
+  const queueRef = useRef<string[]>([]);
+  const cardRefs = useRef<Record<string, HTMLDivElement | null>>({});
+
+  useEffect(() => {
+    playingRef.current = playingId;
+  }, [playingId]);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          const id = entry.target.getAttribute("data-video-id");
+          if (!id) return;
+
+          if (entry.isIntersecting) {
+            if (playingRef.current === null) {
+              playingRef.current = id;
+              setPlayingId(id);
+            } else if (playingRef.current !== id && !queueRef.current.includes(id)) {
+              queueRef.current.push(id);
+            }
+          } else {
+            queueRef.current = queueRef.current.filter((queuedId) => queuedId !== id);
+            if (playingRef.current === id) {
+              const next = queueRef.current.shift() ?? null;
+              playingRef.current = next;
+              setPlayingId(next);
+            }
+          }
+        });
+      },
+      { threshold: 0.6 }
+    );
+
+    Object.values(cardRefs.current).forEach((el) => el && observer.observe(el));
+    return () => observer.disconnect();
+  }, []);
+
+  const playNow = (id: string) => {
+    queueRef.current = queueRef.current.filter((queuedId) => queuedId !== id);
+    playingRef.current = id;
+    setPlayingId(id);
+  };
 
   return (
     <section id="talks" className="py-20 sm:py-28" data-testid="section-talks">
@@ -33,12 +77,18 @@ export function Talks() {
               transition={{ duration: 0.4, delay: i * 0.05 }}
             >
               <div className="rounded-2xl overflow-hidden border border-border shadow-sm" data-testid={`card-talk-${i}`}>
-                <div className="relative aspect-video bg-black/5">
+                <div
+                  ref={(el) => {
+                    cardRefs.current[talk.videoId!] = el;
+                  }}
+                  data-video-id={talk.videoId}
+                  className="relative aspect-video bg-black/5"
+                >
                   <LiteYouTube
                     videoId={talk.videoId!}
                     title={talk.label}
                     playing={playingId === talk.videoId}
-                    onPlay={() => setPlayingId(talk.videoId!)}
+                    onPlay={() => playNow(talk.videoId!)}
                   />
                 </div>
                 <p className="text-sm font-medium p-4">{talk.label}</p>
