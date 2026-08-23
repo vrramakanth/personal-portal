@@ -7,7 +7,6 @@ import { Sheet, SheetTrigger, SheetContent, SheetTitle, SheetClose } from "@/com
 const navLinks = [
   { href: "#about", label: "About" },
   { href: "#journey", label: "Journey" },
-  { href: "#leadership", label: "Leadership" },
   { href: "#initiatives", label: "Initiatives" },
   { href: "#recognition", label: "Recognition" },
   { href: "#talks", label: "Talks" },

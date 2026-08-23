@@ -1,9 +1,9 @@
 import { motion } from "framer-motion";
-import { Award, ExternalLink, GraduationCap, ShieldCheck } from "lucide-react";
+import { Award, ExternalLink, GraduationCap, ShieldCheck, Users } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 import { Card } from "@/components/ui/card";
 import { Separator } from "@/components/ui/separator";
-import { skillGroups, education, certifications, credlyUrl, recognition } from "@/data/portfolio";
+import { skillGroups, education, certifications, credlyUrl, recognition, leadershipTimeline } from "@/data/portfolio";
 
 export function Recognition() {
   return (
@@ -43,7 +43,7 @@ export function Recognition() {
           ))}
         </div>
 
-        <div className="grid md:grid-cols-3 gap-5">
+        <div className="grid md:grid-cols-2 gap-5">
           <Card className="p-6 rounded-2xl" data-testid="card-education">
             <div className="flex items-center gap-2 mb-4">
               <GraduationCap className="w-5 h-5 text-primary" />
@@ -108,6 +108,37 @@ export function Recognition() {
                     <p className="font-semibold text-sm">{r.title}</p>
                   )}
                   <p className="text-xs text-muted-foreground mt-0.5">{r.description}</p>
+                </div>
+              ))}
+            </div>
+          </Card>
+
+          <Card className="p-6 rounded-2xl" data-testid="card-leadership">
+            <div className="flex items-center gap-2 mb-4">
+              <Users className="w-5 h-5 text-primary" />
+              <h3 className="font-display font-bold">Leadership Development</h3>
+            </div>
+            <div className="space-y-4">
+              {leadershipTimeline.map((item) => (
+                <div key={item.title} className="flex items-start justify-between gap-3">
+                  <div>
+                    {item.source ? (
+                      <a
+                        href={item.source.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="font-semibold text-sm text-primary hover:underline inline-flex items-center gap-1"
+                      >
+                        {item.title}
+                        <ExternalLink className="w-3 h-3" />
+                      </a>
+                    ) : (
+                      <p className="font-semibold text-sm">{item.title}</p>
+                    )}
+                    <p className="text-xs text-muted-foreground mt-0.5">{item.org}</p>
+                    {item.note && <p className="text-xs text-muted-foreground mt-0.5">{item.note}</p>}
+                  </div>
+                  <span className="text-xs text-muted-foreground whitespace-nowrap shrink-0">{item.period}</span>
                 </div>
               ))}
             </div>

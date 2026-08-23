@@ -192,9 +192,6 @@ export const recognition = [
   },
 ];
 
-export const leadershipIntro =
-  "Structured leadership programs, industry forums — the learning has never really stopped, and lately includes stepping in himself to teach and mentor.";
-
 export interface LeadershipMilestone {
   title: string;
   org: string;
@@ -206,20 +203,22 @@ export interface LeadershipMilestone {
 export const leadershipTimeline: LeadershipMilestone[] = [
   { title: "Foundations of GE Leadership", org: "GE Crotonville", period: "2007" },
   { title: "Building Essential Leadership Skills", org: "GE Global Learning", period: "2011" },
-  { title: "Accelerated Learning Program, Functional Management Track", org: "GE", period: "2014" },
-  { title: "India Frontline Leaders Academy", org: "GE", period: "2015" },
+  {
+    title: "Accelerated Learning Program, Functional Management",
+    org: "GE Healthcare, Global Technology Organization – India",
+    period: "2014",
+  },
+  { title: "India Frontline Leaders Academy", org: "GE India", period: "2015" },
   { title: "Managing at GE", org: "GE Crotonville", period: "2015" },
   {
     title: "Mentor, Edison Engineering Development Program",
-    org: "GE Healthcare",
+    org: "GE Global Leadership Programs",
     period: "2019 — 2021",
-    note: "Hands-on technical mentorship",
   },
   {
     title: "Leadership Training Facilitator",
     org: "State Street, GTS India",
     period: "2024",
-    note: "Stepped in to teach and mentor",
     source: {
       label: "View the LinkedIn post",
       url: "https://www.linkedin.com/posts/vrramakanth_leadershipdevelopment-futureleaders-continuouslearning-activity-7276979173724725248-CL1E/",
