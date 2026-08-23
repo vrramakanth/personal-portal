@@ -157,15 +157,11 @@ export const education = [
     school: "JNTU",
     detail: "1998 — 2002",
   },
-  {
-    degree: "Data Science & AI Programme",
-    school: "VIT Bangalore × Emeritus India",
-    detail: "Completed 2025",
-  },
 ];
 
 export const certifications = [
   { name: "AWS Certified AI Practitioner", date: "Dec 2025" },
+  { name: "Data Science & AI Programme", date: "Sep 2025" },
   { name: "AWS Certified Cloud Practitioner", date: "Mar 2024" },
   { name: "Microsoft Certified: Azure Fundamentals", date: "May 2023" },
   { name: "Introduction to Platform Engineering", date: "Feb 2026" },
