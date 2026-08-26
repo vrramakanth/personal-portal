@@ -39,9 +39,12 @@ export const socials: SocialLink[] = [
 
 export const aboutParagraphs = [
   "Ramakanth V.R. is an engineering and technology leader with over two decades of experience in software systems, working at the intersection of hardware, software, and emerging technologies. He has led global cross-functional teams, driven digital transformation, and contributed to innovation through patented work — combining technical depth with a practical, people-first approach to leadership, on the job and in the community he calls home.",
-  "Outside work, he's the kind of person who believes in giving back to the places that shaped him — his alma mater, and the community he lives in (more on that below). He values independent thinking, enjoys meaningful conversations, and treats change as a chance to learn.",
+  "Outside work, he's the kind of person who believes in giving back to the places that shaped him — his alma mater, and the community he lives in (more on that below). He values independent thinking, enjoys meaningful conversations, treats change as a chance to learn, and — with friends — turns into the goofy, fun-loving prankster of the group.",
   "When he's not building platforms, you will find him working on next initiative or celebration at his community, scouting a good long drive, traveling with family, or buried in his Kindle — Partition-era history for the next political debate, a coaching book for the next mentoring session, or the odd DevOps classic for old times' sake. Above all, he's a family person who takes great joy in supporting his daughter's interests and being present for the moments that matter most.",
 ];
+
+export const aboutQuote = "Give me a point of support and I will move the earth.";
+export const aboutQuoteAttribution = "— Archimedes, his favorite quote";
 
 export interface JourneyChapter {
   era: string;
@@ -74,7 +77,8 @@ export const careerMilestoneQuote =
 
 export interface InitiativeDetail {
   label: string;
-  source: { label: string; url: string };
+  source?: { label: string; url: string };
+  caption?: string;
 }
 
 export interface Initiative {
@@ -90,7 +94,7 @@ export const initiatives: Initiative[] = [
   {
     title: "Community Initiatives",
     description:
-      "Over the years, turning everyday challenges into structured, sustainable initiatives spanning governance, smart utilities, solar and EV infrastructure, and resident life. It's community leadership, operational transformation, sustainability, and civic engagement, all at once — work that saw the team he's part of earn wider recognitions. A closer look at three of those projects:",
+      "Over the years, turning everyday challenges into structured, sustainable initiatives spanning governance, smart utilities, solar and EV infrastructure, and resident life. It's community leadership, operational transformation, sustainability, and civic engagement, all at once — work that saw the team he's part of earn wider recognitions. A closer look at a few of those projects:",
     details: [
       {
         label: "Rooftop Solar Adoption",
@@ -103,6 +107,14 @@ export const initiatives: Initiative[] = [
       {
         label: "Community Waste Management",
         source: { label: "Watch: Setting Up an Effective Waste Management System", url: "https://youtu.be/MqDwm5mUWGU" },
+      },
+      {
+        label: "Championing Community Celebrations",
+        caption: "The right culture gets built when people come together, celebrate, and truly know each other.",
+      },
+      {
+        label: "Kannada Kaliyona",
+        caption: "With Anvaya Foundation — 100 residents, two batches, now confident to try speaking Kannada.",
       },
     ],
   },

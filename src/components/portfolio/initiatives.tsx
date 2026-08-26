@@ -46,15 +46,19 @@ export function Initiatives() {
                       {item.details.map((detail) => (
                         <li key={detail.label}>
                           <p className="text-sm font-medium mb-1">{detail.label}</p>
-                          <a
-                            href={detail.source.url}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:underline"
-                          >
-                            {detail.source.label}
-                            <ExternalLink className="w-3 h-3" />
-                          </a>
+                          {detail.source ? (
+                            <a
+                              href={detail.source.url}
+                              target="_blank"
+                              rel="noopener noreferrer"
+                              className="inline-flex items-center gap-1.5 text-xs font-semibold text-primary hover:underline"
+                            >
+                              {detail.source.label}
+                              <ExternalLink className="w-3 h-3" />
+                            </a>
+                          ) : (
+                            detail.caption && <p className="text-xs text-muted-foreground">{detail.caption}</p>
+                          )}
                         </li>
                       ))}
                     </ul>

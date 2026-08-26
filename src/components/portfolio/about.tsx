@@ -1,5 +1,6 @@
 import { motion } from "framer-motion";
-import { aboutParagraphs } from "@/data/portfolio";
+import { Quote } from "lucide-react";
+import { aboutParagraphs, aboutQuote, aboutQuoteAttribution } from "@/data/portfolio";
 
 export function About() {
   return (
@@ -24,6 +25,19 @@ export function About() {
               </p>
             ))}
           </div>
+
+          <motion.blockquote
+            initial={{ opacity: 0, y: 16 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true, margin: "-60px" }}
+            transition={{ duration: 0.4 }}
+            className="mt-8 border-l-2 border-primary pl-6"
+            data-testid="quote-about"
+          >
+            <Quote className="w-5 h-5 text-primary mb-2" />
+            <p className="text-lg font-display italic leading-relaxed">"{aboutQuote}"</p>
+            <p className="text-sm text-muted-foreground mt-2">{aboutQuoteAttribution}</p>
+          </motion.blockquote>
         </motion.div>
       </div>
     </section>
