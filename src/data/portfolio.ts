@@ -191,12 +191,12 @@ export const recognition = [
     url: "https://patents.google.com/patent/US20090257628",
   },
   {
-    title: "Lead Presenter, GE Global Technology Symposium",
-    description: "GE Healthcare's first Global Technology Symposium, Milwaukee, WI.",
-  },
-  {
     title: "XLRI Gold Medal",
     description: "Topped XLRI's MBA (PGCBM-20) batch.",
+  },
+  {
+    title: "Lead Presenter, GE Global Technology Symposium",
+    description: "GE Healthcare's first Global Technology Symposium, Milwaukee, WI.",
   },
   {
     title: "Featured Voice, Mygate Dispatch Spotlight",
