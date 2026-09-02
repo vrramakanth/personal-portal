@@ -20,7 +20,7 @@ export const profile = {
   title: "VP, Platform Software Engineering",
   company: "State Street",
   location: "Bengaluru, India",
-  tagline: "Engineering Leader · Mentor · Community Builder",
+  tagline: "Platform Engineering Leader · Mentor · Community Builder",
   email: "vrramakanth@gmail.com",
   phone: "+91 9880766321",
   whatsapp: "https://wa.me/919880766321",
@@ -57,13 +57,13 @@ export const journey: JourneyChapter[] = [
     era: "2023 — Present",
     title: "Building platforms at State Street",
     summary:
-      "Now VP of Platform Software Engineering, running the global org behind the Enterprise Foundation Platform — the infrastructure 100+ teams build on. A shift from shipping products to building what other builders use.",
+      "Now VP of Platform Software Engineering, running the global org behind the Enterprise Foundation Platform — the multi-cloud platform behind the firm's modernisation — 20+ components live and 10+ applications onboarded. A shift from shipping products to building what other builders use.",
   },
   {
     era: "2004 — 2023",
     title: "Two decades at GE Healthcare",
     summary:
-      "Started as a software engineer building medical imaging apps for PET/CT and MR scanners, and worked up to Director over the next 19 years — picking up a patent, a 50-person global team, and a habit of being the person people called when something needed to ship.",
+      "Started as a software engineer building medical imaging apps for PET/CT and MR scanners, and worked up to Director over the next 19 years — picking up a patent, a 40+ person global team across India, China and France, and a habit of being the person people called when something needed to ship.",
   },
   {
     era: "Throughout",
@@ -140,6 +140,7 @@ export const skillGroups = [
   {
     label: "Technology",
     skills: [
+      "Platform Engineering · Developer Experience",
       "Digital Transformation",
       "Java · Microservices · REST APIs",
       "AWS · Azure · Edge",
