@@ -46,7 +46,8 @@ export function Initiatives() {
                       {item.details.map((detail) => (
                         <li key={detail.label}>
                           <p className="text-sm font-medium mb-1">{detail.label}</p>
-                          {detail.source ? (
+                          {detail.caption && <p className="text-xs text-muted-foreground mb-1">{detail.caption}</p>}
+                          {detail.source && (
                             <a
                               href={detail.source.url}
                               target="_blank"
@@ -56,8 +57,6 @@ export function Initiatives() {
                               {detail.source.label}
                               <ExternalLink className="w-3 h-3" />
                             </a>
-                          ) : (
-                            detail.caption && <p className="text-xs text-muted-foreground">{detail.caption}</p>
                           )}
                         </li>
                       ))}

@@ -115,6 +115,7 @@ export const initiatives: Initiative[] = [
       {
         label: "Kannada Kaliyona",
         caption: "With Anvaya Foundation — 100 residents, two batches, now confident to try speaking Kannada.",
+        source: { label: "See the graduation day", url: "https://www.facebook.com/share/p/1bAEj4rEs3/" },
       },
     ],
   },
